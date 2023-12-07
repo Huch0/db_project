@@ -120,8 +120,19 @@ export default function PostCard({ post, selectedUser, setFetchedData }) {
                 <span>{comments && comments.length}</span>
               </button>
               {
-                // post.author_id가 selectedUser.id와 같으면 보임.
-                post.author_id === selectedUser.id && (
+                (selectedUser.role === "admin") ? (
+                  <>
+                    <button
+                      onClick={handleDelete}
+                      className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                      삭제
+                    </button>
+                  </>
+                ) :null
+              }
+              {
+                (post.author_id === selectedUser.id) ? (
                   <>
                     <button
                       onClick={handleEdit}
@@ -137,6 +148,7 @@ export default function PostCard({ post, selectedUser, setFetchedData }) {
                     </button>
                   </>
                 )
+                :null
               }
             </div>
           </div>
