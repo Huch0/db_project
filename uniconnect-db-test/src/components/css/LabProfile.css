@@ -1,0 +1,38 @@
+.labProfile {
+  width: 700px; /* 카드의 너비를 700px로 변경 */
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* 테두리 반경을 20px로 변경 */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* 박스 그림자 추가 */
+}
+
+.labName, .university, .description {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: #f0f0f0; /* 배경색을 #f0f0f0으로 변경 */
+  font-size: 18px; /* 글자 크기를 18px로 변경 */
+  overflow: auto;
+}
+
+button {
+  margin-right: 10px;
+  background-color: #008CBA; /* 버튼의 배경색을 #008CBA로 설정 */
+  border: none;
+  color: white; /* 버튼의 글자색을 흰색으로 설정 */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: #4CAF50; /* 마우스를 올렸을 때 버튼의 배경색을 #4CAF50로 설정 */
+  color: white; /* 마우스를 올렸을 때 버튼의 글자색을 흰색으로 설정 */
+}

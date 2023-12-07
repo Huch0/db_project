@@ -1,0 +1,35 @@
+.page {
+    background: var(--geist-background);
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type='text'],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.25rem;
+    border: 0.125rem solid rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type='submit'] {
+    background-color: #f44336; /* 버튼의 배경색을 #f44336으로 변경 */
+    color: white; /* 버튼의 글자색을 흰색으로 변경 */
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .back {
+    margin-left: 1rem;
+  }
+  
