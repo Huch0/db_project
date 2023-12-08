@@ -71,25 +71,30 @@ function LabCard({ lab, selectedUser }) {
         </div>
       </div>
       <div className="flex justify-end space-x-4 p-4">
-        <button
-          disabled={
-            contactStatus === "수락됨" ||
-            contactStatus === "거절됨" ||
-            contactStatus === "수락 대기중"
-          }
-          className={`font-bold py-2 px-4 rounded ${
-            contactStatus === "수락됨"
-              ? "bg-blue-400 text-white  border hover:bg-blue-500 hover:text-white"
-              : contactStatus === "거절됨"
-              ? "bg-red-500 text-white border hover:bg-white hover:text-red-500"
-              : contactStatus === "수락 대기중"
-              ? "bg-green-500 text-white border hover:bg-white hover:text-green-500"
-              : "bg-white text-blue-500 border hover:bg-blue-500 hover:text-white"
-          }`}
-          onClick={handleContactRequest}
-        >
-          {contactStatus}
-        </button>
+        {
+          selectedUser.role !== "reader" && (
+            <button
+            disabled={
+              contactStatus === "수락됨" ||
+              contactStatus === "거절됨" ||
+              contactStatus === "수락 대기중"
+            }
+            className={`font-bold py-2 px-4 rounded ${
+              contactStatus === "수락됨"
+                ? "bg-blue-400 text-white  border hover:bg-blue-500 hover:text-white"
+                : contactStatus === "거절됨"
+                ? "bg-red-500 text-white border hover:bg-white hover:text-red-500"
+                : contactStatus === "수락 대기중"
+                ? "bg-green-500 text-white border hover:bg-white hover:text-green-500"
+                : "bg-white text-blue-500 border hover:bg-blue-500 hover:text-white"
+            }`}
+            onClick={handleContactRequest}
+          >
+            {contactStatus}
+          </button>
+          )
+        }
+      
         {
           // research이고 lab의 manager가 아니면 보임.
           selectedUser.role === "researcher" &&

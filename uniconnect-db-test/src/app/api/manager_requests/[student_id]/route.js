@@ -7,7 +7,7 @@
 //  A simple GET Example
 
 import { NextResponse } from "next/server";
-import { createManager_request,manageManager_request } from "@/../db/api/manager_requests";
+import { createManager_request,manageManager_request } from "../../../../../db/api/transaction/manager_requests";
 import { parse } from "url";
 
 export async function POST(Request, { params }) {

@@ -7,7 +7,7 @@
 //  A simple GET Example
 
 import { NextResponse } from "next/server";
-import { getAllManager_requests } from "@/../db/api/manager_requests";
+import { getAllManager_requests } from "../../../../db/api/transaction/manager_requests";
 import { parse } from "url";
 
 export async function GET(Request) {
