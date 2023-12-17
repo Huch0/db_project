@@ -5,7 +5,7 @@ module.exports = {
     username: "uniconnect_admin",
     password: "mudBob-sykwu4-zitxij",
     database: "db_project",
-    host: "127.0.0.1",
+    host: "postgres",
     dialect: "postgres",
   },
   test: {

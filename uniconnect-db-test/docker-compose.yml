@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: db_project-postgres
+    environment:
+      POSTGRES_DB: db_project
+      POSTGRES_USER: uniconnect_admin
+      POSTGRES_PASSWORD: mudBob-sykwu4-zitxij
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - app_network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: db_project-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  pg_data:
